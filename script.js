@@ -1,21 +1,41 @@
+const displayMessage =function(message){
+  document.querySelector('.message').textContent = message;
+};
+
+const check_fizzbuzz = function(number){
+  if(!number)
+  {
+    displayMessage('Khali hai!');
+  }
+
+
+ else if(number%3==0)
+  {
+   if(number%5==0)
+     {
+      displayMessage('FizzBuzz');
+     }
+
+   else{
+       displayMessage('Fizz');
+      }  
+  }
+
+  else if(number%5==0)
+  {
+   displayMessage('Buzz');
+  }
+
+  
+  else{
+      displayMessage(number);
+  }
+};
+
 document.querySelector('.check').addEventListener('click',function(){
     const number = Number(document.querySelector('.guess').value);
-    for(let i = 1 ; i<number ;i++)
-    {
-       if(i%3==0)
-       {
-        if(i%5==0)
-          {
-            console.log("FizzBuzz");
-          }
+      check_fizzbuzz(number);
+  }
 
-        else{
-            console.log("Fizz");
-        }  
-       }
-
-       else{
-        console.log("Buzz");
-       }
-    }
-});
+  
+);

@@ -56,3 +56,10 @@ body{
     top: 200px;
     left:700px;
 }
+
+.message{
+    position: relative;
+    top: 300px;
+    left:780px;
+   
+}
